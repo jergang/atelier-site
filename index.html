@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atelier Milano, leather goods made to order</title>
+  <meta name="description" content="A leather workshop in Milan making bags, small leather goods, belts and gifts to order for brands.">
+  <meta name="theme-color" content="#6B0F22">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236b0f22'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Didot,serif' font-style='italic' font-size='20' fill='%23dbb46a'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <canvas id="hide" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="nav__mark" href="#top">Atelier Milano</a>
+    <nav aria-label="Sections">
+      <a href="#leathers">Leathers</a>
+      <a href="#pieces">Pieces</a>
+      <a href="#making">Making</a>
+      <a class="nav__cta" href="#write">Request the catalogue</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" data-dye="bordeaux" data-finish="vitello">
+      <h1 class="hero__title">Atelier <span>Milano</span></h1>
+      <div class="hero__foot">
+        <p class="hero__lede" data-lines>Leather goods made to order for brands, cut and stitched in Milan.</p>
+        <p class="hero__cue"><span></span>Scroll, and move the light</p>
+      </div>
+    </section>
+
+    <section class="manifesto" data-dye="notte" data-finish="vitello">
+      <p class="manifesto__text" data-words>We are a workshop that makes leather goods for other people's names. Bags, wallets, belts and gifts leave here cut by hand, stitched on the bench and finished at the edge, from a single sample to a full run.</p>
+      <p class="manifesto__aside" data-lines>Most of what we make carries someone else's stamp. This site is the first time we have shown it under our own.</p>
+    </section>
+
+    <section class="book" id="leathers" aria-label="The sample book">
+      <div class="book__track">
+        <article class="panel" data-dye="bordeaux" data-finish="vitello">
+          <p class="panel__intro">Il campionario<br>the sample book</p>
+          <h2 class="panel__name">Vitello</h2>
+          <div class="panel__body">
+            <p class="panel__tag">Bordeaux</p>
+            <p>Full-grain calf with a natural pebble. It takes structure well, so it is what we reach for in bags and anything that has to stand up on its own.</p>
+          </div>
+          <p class="panel__count">1 of 5</p>
+        </article>
+        <article class="panel" data-dye="blu" data-finish="saffiano">
+          <h2 class="panel__name">Saffiano</h2>
+          <div class="panel__body">
+            <p class="panel__tag">Blu Savoia</p>
+            <p>Calf pressed with a fine cross-hatch and sealed. It shrugs off scratches and water, which is why card holders and travel pieces are so often made in it.</p>
+          </div>
+          <p class="panel__count">2 of 5</p>
+        </article>
+        <article class="panel panel--ink" data-dye="zafferano" data-finish="vacchetta">
+          <h2 class="panel__name">Vacchetta</h2>
+          <div class="panel__body">
+            <p class="panel__tag">Zafferano</p>
+            <p>Vegetable-tanned cowhide, smooth and firm. It darkens with handling and keeps the marks of whoever owns it, so it suits belts, straps and gifts meant to be kept.</p>
+          </div>
+          <p class="panel__count">3 of 5</p>
+        </article>
+        <article class="panel" data-dye="verde" data-finish="nappa">
+          <h2 class="panel__name">Nappa</h2>
+          <div class="panel__body">
+            <p class="panel__tag">Verde bottiglia</p>
+            <p>Soft, fine-grained and close to weightless in the hand. We use it for linings, pouches and anything that should fold rather than stand.</p>
+          </div>
+          <p class="panel__count">4 of 5</p>
+        </article>
+        <article class="panel panel--ink" data-dye="cipria" data-finish="suede">
+          <h2 class="panel__name">Scamosciato</h2>
+          <div class="panel__body">
+            <p class="panel__tag">Cipria</p>
+            <p>Suede, brushed until the nap changes shade under your thumb. It goes inside lids and trays, and outside when a piece wants no shine at all.</p>
+          </div>
+          <p class="panel__count">5 of 5</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="pieces" id="pieces" data-dye="osso" data-finish="vacchetta">
+      <h2 class="pieces__title" data-lines>What leaves the workshop</h2>
+      <p class="pieces__lede" data-lines>Every piece starts as a paper pattern. These are four of ours; yours can replace any of them.</p>
+      <div class="pieces__grid">
+        <figure class="piece">
+          <svg viewBox="0 0 400 300" aria-hidden="true">
+            <path class="draw" pathLength="1" d="M90 110H310L340 270H60Z"/>
+            <path class="draw" pathLength="1" d="M140 110C140 28 260 28 260 110"/>
+            <path class="draw" pathLength="1" d="M160 110C160 56 240 56 240 110"/>
+            <path class="st" d="M99 121H301L327 259H73Z"/>
+          </svg>
+          <figcaption><em>Borse</em>Totes, shoulder bags, pouches</figcaption>
+        </figure>
+        <figure class="piece">
+          <svg viewBox="0 0 400 300" aria-hidden="true">
+            <path class="draw" pathLength="1" d="M60 60H340a14 14 0 0 1 14 14V226a14 14 0 0 1-14 14H60a14 14 0 0 1-14-14V74a14 14 0 0 1 14-14Z"/>
+            <path class="draw" pathLength="1" d="M46 118C150 108 250 108 354 118"/>
+            <path class="draw" pathLength="1" d="M46 162C150 152 250 152 354 162"/>
+            <path class="st" d="M62 72H338a6 6 0 0 1 6 6V222a6 6 0 0 1-6 6H62a6 6 0 0 1-6-6V78a6 6 0 0 1 6-6Z"/>
+          </svg>
+          <figcaption><em>Piccola pelletteria</em>Card holders, wallets, passport covers</figcaption>
+        </figure>
+        <figure class="piece">
+          <svg viewBox="0 0 400 300" aria-hidden="true">
+            <path class="draw" pathLength="1" d="M66 128H330L384 150L330 172H66Z"/>
+            <path class="draw" pathLength="1" d="M16 114H66V186H16Z"/>
+            <path class="draw" pathLength="1" d="M16 150H92"/>
+            <circle class="draw" pathLength="1" cx="250" cy="150" r="4"/>
+            <circle class="draw" pathLength="1" cx="278" cy="150" r="4"/>
+            <circle class="draw" pathLength="1" cx="306" cy="150" r="4"/>
+            <path class="st" d="M74 136H328L362 150L328 164H74"/>
+          </svg>
+          <figcaption><em>Cinture</em>Belts and straps, cut to length</figcaption>
+        </figure>
+        <figure class="piece">
+          <svg viewBox="0 0 400 300" aria-hidden="true">
+            <circle class="draw" pathLength="1" cx="200" cy="58" r="30"/>
+            <path class="draw" pathLength="1" d="M178 84L162 232a38 38 0 0 0 76 0L222 84Z"/>
+            <path class="st" d="M185 96L172 232a28 28 0 0 0 56 0L215 96"/>
+            <text x="200" y="222" text-anchor="middle">AM</text>
+          </svg>
+          <figcaption><em>Regali</em>Key fobs, trays and gifts, initialled one by one</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="making" id="making" data-dye="blu" data-finish="saffiano">
+      <h2 class="making__title" data-lines>How a piece is made</h2>
+      <div class="making__body">
+        <div class="making__thread" aria-hidden="true"><i class="thread__line"></i></div>
+        <ol class="steps">
+          <li class="step"><span class="step__n">1</span><div><h3>Taglio</h3><p>Cutting. The hide is read for scars and stretch before a single piece is marked, then cut by knife or by die.</p></div></li>
+          <li class="step"><span class="step__n">2</span><div><h3>Scarnitura</h3><p>Skiving. Edges and folds are thinned so that seams sit flat and corners turn cleanly.</p></div></li>
+          <li class="step"><span class="step__n">3</span><div><h3>Cucitura</h3><p>Stitching. By machine where a line must be dead straight, by hand where the machine cannot reach.</p></div></li>
+          <li class="step"><span class="step__n">4</span><div><h3>Coste</h3><p>Edges. Sanded, painted and sanded again, coat after coat, until the edge is smooth to the nail.</p></div></li>
+          <li class="step"><span class="step__n">5</span><div><h3>Timbro</h3><p>Stamping. Your mark goes in last, with heat and pressure, blind or in foil.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="brands" data-dye="zafferano" data-finish="vacchetta">
+      <h2 class="brands__title" data-lines>Made under your name</h2>
+      <div class="brands__cols">
+        <div><h3>Start with one sample</h3><p>We make a single piece first. You hold it, change it, and only then decide on a run.</p></div>
+        <div><h3>Bring a pattern, or use ours</h3><p>Send a sketch, a tech pack or a piece you love. Or begin from a shape we already cut.</p></div>
+        <div><h3>Your mark, not ours</h3><p>Nothing leaves here with our name on it unless you ask. Stamps, linings and packaging are yours.</p></div>
+      </div>
+      <p class="brands__gift" data-lines>We also make gifts for companies and private clients, initialled piece by piece.</p>
+    </section>
+
+    <section class="write" id="write" data-dye="bordeaux" data-finish="vitello">
+      <h2 class="write__title"><em data-lines>Scriveteci</em><span data-lines>Write to us</span></h2>
+      <form class="form" novalidate>
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Brand or company<input name="brand" autocomplete="organization"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label class="form__wide">What would you like to make?<textarea name="brief" rows="3"></textarea></label>
+        <button type="submit">Request the catalogue</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
+      <footer class="foot">
+        <p>Atelier Milano is a working name for this draft.</p>
+        <p>Milano, 2026</p>
+      </footer>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
