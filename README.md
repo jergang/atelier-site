@@ -1,44 +1,48 @@
-# Atelier site
+# Atelier Firenze
 
-First draft of the site for the Milan leather workshop. "Atelier Milano" is a working name.
+Website draft for a Florentine leather workshop that makes for the fashion houses. "Atelier Firenze" is a working name: change it in `src/config.ts`.
 
-One page, no commerce. The background is a real-time leather surface: each chapter is a different hide, sewn to the next, lit by a lamp that follows the pointer. The wordmark is heat-stamped in foil on load.
+One page, no commerce, built in code:
 
-## Run it
+| Section | What it is |
+|---|---|
+| Opening | The name foil-stamped into black calf (WebGL) |
+| Hero | The workshop's photo of rows of finished bags, given depth; scrolling cranes down the aisle |
+| Maisons | The houses, in two slow counter-scrolling rows; hover shows a piece made for that house |
+| La vetrina | three.js gallery: finished pieces cut out of the workshop's photos, in glass cases under spotlights |
+| Dal disegno all'oggetto | A box bag's pattern is drawn, cut, folded into a 3D bag, turned through eight colours, then dissolves into the real photo |
+| Produzione | Pinned horizontal film strip of the production photos |
+| I materiali | Glazed crocodile relit by the cursor, plus relightable swatches cropped from the photos |
+| Le mani | Editorial spread of the workshop and quality checks |
+| Firenze | The word filled with live Florentine marbled paper |
+| Scriveteci | Appointment form on marbled paper (not connected to an inbox yet) |
+
+## Run
 
 ```
 npm install
-npm run dev      # local preview
-npm run build    # static site in dist/
+npm run dev
+npm run build   # static site in dist/
 ```
 
-Deploy: import the repo in Vercel (framework preset "Vite"). Every push gets its own preview link.
+Deployed on Vercel (framework preset: Vite).
 
-## Where things are
+## Edit
 
-| File | What it holds |
-|---|---|
-| `index.html` | All copy and structure |
-| `src/style.css` | Palette tokens, type, layout |
-| `src/palette.ts` | Dye colours and leather finishes for the shader |
-| `src/hide.ts` | The WebGL leather: grain, light, seams, stamp |
-| `src/main.ts` | Scroll and motion (GSAP, ScrollTrigger, SplitText, Lenis) |
-| `.claude/skills/` | Design skills Claude reads when working in this repo |
+- Name, houses, vitrine pieces, bag colours: `src/config.ts`
+- Copy and structure: `index.html`
+- Palette and type: `src/style.css`
+- WebGL scenes: `src/gl/`
+- Images: `public/img/` (graded and cut out from the workshop's photos)
 
-## Still placeholder
+## Still to confirm with the workshop
 
-- The name, and every line of copy: written to be plausible, not confirmed by the workshop.
-- The four pattern drawings stand in for product photography.
-- The form is not connected to an inbox.
+- The real name and address.
+- Written permission for every house named on the site.
+- Every caption and claim.
 
 ## Skills in this repo
 
-| Skill | Source | Licence |
-|---|---|---|
-| `atelier-house-style` | written for this project | ours |
-| `frontend-design` | anthropics/skills | Apache 2.0 |
-| `impeccable` | pbakaus/impeccable | Apache 2.0 |
-| `taste-skill` | Leonxlnx/taste-skill | MIT |
-| `cinematic-gsap-lenis-motion-system`, `cinematic-scroll-storytelling`, `horizontal-scroll-scenes` | mengto/skills | MIT |
+`.claude/skills/` holds the design skills Claude reads when working here: `atelier-house-style` (written for this project), `frontend-design` (anthropics/skills, Apache 2.0), `impeccable` (pbakaus/impeccable, Apache 2.0), `taste-skill` (MIT), and three motion skills from mengto/skills (MIT).
 
-Fonts: Bodoni Moda and Archivo (SIL Open Font License), bundled through Fontsource.
+Fonts: Italiana and Jost (SIL Open Font License), via Fontsource.
