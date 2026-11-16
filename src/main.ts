@@ -1,5 +1,9 @@
-import '@fontsource/italiana/400.css';
-import '@fontsource-variable/jost/wght.css';
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/cormorant-garamond/500-italic.css';
+import '@fontsource/cormorant-garamond/600-italic.css';
+import '@fontsource/hanken-grotesk/400.css';
+import '@fontsource/hanken-grotesk/500.css';
 import './style.css';
 
 import Lenis from 'lenis';
@@ -8,6 +12,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import { NAME, HOUSES, VITRINE, BAG_COLOURS } from './config';
 import { PLANS } from './plans';
+
+// Official logos, inlined so they take the page's colour.
+const LOGOS = import.meta.glob('./logos/*.svg', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+function logo(h: { logo: string; weight?: number }) {
+  const svg = LOGOS[`./logos/${h.logo}.svg`] || '';
+  const vb = /viewBox="([^"]+)"/.exec(svg)?.[1].split(/\s+/).map(Number) || [0, 0, 10, 1];
+  // balance by visual area rather than height, so wide wordmarks and compact marks look equal
+  const k = Math.sqrt(10 / (vb[2] / vb[3])) * (h.weight ?? 1);
+  return { svg: svg.replace('<svg ', '<svg aria-hidden="true" focusable="false" '), k: k.toFixed(3) };
+}
 import { createHide, type HideState } from './gl/hide';
 import { createHero } from './gl/hero';
 import { createCroc } from './gl/croc';
@@ -56,14 +70,14 @@ function opening(): Promise<void> {
   lenis?.stop();
   const nero: [number, number, number] = [0.085, 0.07, 0.06];
   const s: HideState = { light: [innerWidth * 0.62, innerHeight * 0.32], offset: [0, 0], dyeA: nero, dyeB: nero, finA: [1, 0, 0, 11], finB: [1, 0, 0, 11], edge: -9999, axis: 0, press: 0, foil: 0, lightAmt: 0, stampY: 0 };
-  const size = Math.min(innerWidth * 0.15, innerHeight * 0.26);
+  const size = Math.min(innerWidth * 0.13, innerHeight * 0.24);
   const c = document.createElement('canvas'); const d = hide.dpr;
   c.width = Math.round(innerWidth * d); c.height = Math.round(innerHeight * d);
   const g = c.getContext('2d')!;
   g.fillStyle = '#000'; g.fillRect(0, 0, c.width, c.height);
   g.fillStyle = '#fff'; g.strokeStyle = '#fff'; g.textAlign = 'center'; g.lineJoin = 'round';
-  g.font = `400 ${size * d}px Italiana, Didot, serif`;
-  g.filter = `blur(${0.7 * d}px)`; g.lineWidth = size * d * 0.022;
+  g.font = `600 ${size * d}px "Cormorant Garamond", Garamond, serif`;
+  g.filter = `blur(${0.7 * d}px)`; g.lineWidth = size * d * 0.008;
   const words = NAME.split(' ');
   words.forEach((w, i) => { const y = c.height * 0.5 + (i - (words.length - 1) / 2) * size * d * 0.95 + size * d * 0.32; g.strokeText(w, c.width / 2, y); g.fillText(w, c.width / 2, y); });
   hide.setStamp(c);
@@ -115,40 +129,42 @@ async function hero() {
 
 /* ---------- 2. the houses ---------- */
 function maisons() {
-  const rows = $('.maisons__rows');
+  const band = $('.mband');
   const peek = $('.maisons__peek'); const peekImg = $<HTMLImageElement>('img', peek); const peekCap = $('figcaption', peek);
-  const make = (cls: string, list: typeof HOUSES) => {
-    const row = document.createElement('div'); row.className = `mrow ${cls}`;
-    for (let k = 0; k < 2; k++) {
-      const set = document.createElement('div'); set.className = 'mrow__set';
-      if (k) set.setAttribute('aria-hidden', 'true');
-      list.forEach((h) => { const s = document.createElement('span'); s.className = 'house'; s.textContent = h.name; s.dataset.name = h.name; set.append(s); });
-      row.append(set);
-    }
-    rows.append(row); return row;
-  };
-  const a = make('mrow--a', HOUSES);
-  const b = make('mrow--b', [...HOUSES.slice(3), ...HOUSES.slice(0, 3)]);
-  const pos = { a: 0, b: -50, speed: 1, target: 1 };
+  const row = document.createElement('div'); row.className = 'mrow';
+  for (let k = 0; k < 2; k++) {
+    const set = document.createElement('div'); set.className = 'mrow__set';
+    if (k) set.setAttribute('aria-hidden', 'true');
+    HOUSES.forEach((h, i) => {
+      const el = document.createElement('span'); el.className = 'logo';
+      const l = logo(h);
+      el.innerHTML = `${l.svg}<span class="sr">${h.name}</span>`;
+      el.style.setProperty('--k', l.k); el.style.setProperty('--i', String(i)); el.dataset.name = h.name;
+      set.append(el);
+    });
+    row.append(set);
+  }
+  band.append(row);
+  const pos = { x: 0, speed: 1, target: 1 };
+  const phone = matchMedia('(max-width: 700px)');
   gsap.ticker.add(() => {
+    if (phone.matches || still) return;
     const v = lenis ? Math.abs(lenis.velocity) : 0;
-    pos.speed += ((pos.target + Math.min(v * 0.08, 4)) - pos.speed) * 0.08;
-    pos.a = (pos.a - 0.018 * pos.speed) % 50; pos.b = ((pos.b + 0.018 * pos.speed) % 50) - (pos.b > 0 ? 50 : 0);
-    gsap.set(a, { xPercent: pos.a }); gsap.set(b, { xPercent: pos.b });
+    pos.speed += ((pos.target + Math.min(v * 0.06, 3)) - pos.speed) * 0.08;
+    pos.x = (pos.x - 0.012 * pos.speed) % 50;
+    gsap.set(row, { xPercent: pos.x });
   });
-  const mouse = { x: 0, y: 0 };
   const qx = gsap.quickTo(peek, 'x', { duration: 0.7, ease: 'power3' }), qy = gsap.quickTo(peek, 'y', { duration: 0.7, ease: 'power3' });
-  addEventListener('pointermove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; qx(e.clientX + 24); qy(e.clientY - 120); }, { passive: true });
-  rows.addEventListener('pointerover', (e) => {
-    const el = (e.target as HTMLElement).closest<HTMLElement>('.house'); if (!el) return;
-    pos.target = 0.15;
+  addEventListener('pointermove', (e) => { qx(e.clientX + 24); qy(e.clientY - 140); }, { passive: true });
+  band.addEventListener('pointerover', (e) => {
+    const el = (e.target as HTMLElement).closest<HTMLElement>('.logo'); if (!el) return;
+    pos.target = 0.1;
     const h = HOUSES.find((x) => x.name === el.dataset.name);
     if (h?.image) { peekImg.src = h.image; peekCap.textContent = `${h.name}, ${h.piece?.toLowerCase()}`; peek.classList.add('is-on'); }
     else peek.classList.remove('is-on');
   });
-  rows.addEventListener('pointerleave', () => { pos.target = 1; peek.classList.remove('is-on'); });
+  band.addEventListener('pointerleave', () => { pos.target = 1; peek.classList.remove('is-on'); });
   const sec = $('.maisons');
-  $$('.house').forEach((h, i) => h.style.setProperty('--i', String(i % HOUSES.length)));
   new IntersectionObserver(([e], o) => { if (e.isIntersecting) { sec.classList.add('is-in'); o.disconnect(); } }, { threshold: 0.2 }).observe(sec);
 }
 
@@ -160,7 +176,7 @@ function vetrina() {
   const show = (i: number) => {
     if (i === shown) return; shown = i;
     label.classList.add('is-swap');
-    setTimeout(() => { const v = VITRINE[i]; house.textContent = v.house; object.textContent = v.object; detail.textContent = v.detail; count.textContent = `${i + 1} / ${VITRINE.length}`; label.classList.remove('is-swap'); }, shown < 0 ? 0 : 280);
+    setTimeout(() => { const v = VITRINE[i]; const hh = HOUSES.find((x) => x.name === v.house); if (hh) { const l = logo(hh); house.innerHTML = `${l.svg}<span class="sr">${v.house}</span>`; house.style.setProperty('--k', l.k); } else house.textContent = v.house; object.textContent = v.object; detail.textContent = v.detail; count.textContent = `${i + 1} / ${VITRINE.length}`; label.classList.remove('is-swap'); }, shown < 0 ? 0 : 280);
   };
   show(0);
   const vp = hasGL ? createVitrine($<HTMLCanvasElement>('.vetrina__gl'), VITRINE.map((p) => ({ src: p.src, height: p.height }))) : null;
@@ -276,7 +292,7 @@ function nav() {
 
 /* ---------- start ---------- */
 (async () => {
-  await Promise.race([document.fonts.load('400 100px Italiana'), new Promise((r) => setTimeout(r, 2000))]);
+  await Promise.race([Promise.all([document.fonts.load('600 100px "Cormorant Garamond"'), document.fonts.load('500 100px "Cormorant Garamond"'), document.fonts.load('400 18px "Hanken Grotesk"')]), new Promise((r) => setTimeout(r, 2500))]);
   const h = await hero();
   maisons(); vetrina(); disegno(); produzione(); materiali(); mani(); marbles(); nav();
   if (!still) titles();

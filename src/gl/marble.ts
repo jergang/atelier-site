@@ -62,9 +62,9 @@ export function createMarble(canvas: HTMLCanvasElement, night: boolean, word?: s
     if (!word) return;
     const c = document.createElement('canvas'); c.width = canvas.width; c.height = canvas.height;
     const g = c.getContext('2d')!;
-    const size = Math.min(c.width * 0.22, c.height * 0.5);
+    const size = Math.min(c.width * (c.width < c.height ? 0.27 : 0.19), c.height * 0.48);
     g.fillStyle = '#000'; g.fillRect(0, 0, c.width, c.height);
-    g.font = `400 ${size}px Italiana, Didot, serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.font = `600 ${size}px "Cormorant Garamond", Garamond, serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
     if ('letterSpacing' in g) (g as any).letterSpacing = `${-0.02 * size}px`;
     const y = c.height * 0.46;
     // red: the fill; green: a brass hairline around it

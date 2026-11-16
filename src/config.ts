@@ -5,6 +5,10 @@ export const NAME = 'Atelier Firenze';
 
 export interface House {
   name: string;
+  /** file in src/logos (official logo, from Wikimedia Commons) */
+  logo: string;
+  /** optical correction: heavier logos are set a touch smaller */
+  weight?: number;
   /** a photo of a piece made for this house, from the workshop's own pictures */
   image?: string;
   piece?: string;
@@ -12,12 +16,12 @@ export interface House {
 
 // Houses named on the site. Prada and Chanel have no photo yet, so they show no preview.
 export const HOUSES: House[] = [
-  { name: 'Balenciaga', image: 'img/embossed-photo.webp', piece: 'Quilted top-handle bag' },
-  { name: 'Saint Laurent', image: 'img/cherry-photo.webp', piece: 'Printed calfskin pouch' },
-  { name: 'Givenchy', image: 'img/denim-photo.webp', piece: 'Denim zip wallet' },
-  { name: 'Maison Margiela', image: 'img/components-photo.webp', piece: 'Grained calf wallets' },
-  { name: 'Prada' },
-  { name: 'Chanel' },
+  { name: 'Balenciaga', logo: 'balenciaga', image: 'img/embossed-photo.webp', piece: 'Quilted top-handle bag' },
+  { name: 'Saint Laurent', logo: 'saintlaurent', weight: 0.88, image: 'img/cherry-photo.webp', piece: 'Printed calfskin pouch' },
+  { name: 'Givenchy', logo: 'givenchy', image: 'img/denim-photo.webp', piece: 'Denim zip wallet' },
+  { name: 'Maison Margiela', logo: 'margiela', weight: 1.05, image: 'img/components-photo.webp', piece: 'Grained calf wallets' },
+  { name: 'Prada', logo: 'prada', weight: 0.9 },
+  { name: 'Chanel', logo: 'chanel', weight: 0.9 },
 ];
 
 // The vitrine: cut-outs of finished pieces, in the order the visitor walks past them.

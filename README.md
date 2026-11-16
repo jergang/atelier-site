@@ -8,7 +8,7 @@ One page, no commerce, built in code:
 |---|---|
 | Opening | The name foil-stamped into black calf (WebGL) |
 | Hero | The workshop's photo of rows of finished bags, given depth; scrolling cranes down the aisle |
-| Maisons | The houses, in two slow counter-scrolling rows; hover shows a piece made for that house |
+| Maisons | The houses' official logos (from Wikimedia Commons, in `src/logos/`) in one slow row, balanced by visual weight; hover shows a piece made for that house. A 2 x 3 grid on phones |
 | La vetrina | three.js gallery: finished pieces cut out of the workshop's photos, in glass cases under spotlights |
 | Dal disegno all'oggetto | A box bag's pattern is drawn, cut, folded into a 3D bag, turned through eight colours, then dissolves into the real photo |
 | Produzione | Pinned horizontal film strip of the production photos |
@@ -45,4 +45,4 @@ Deployed on Vercel (framework preset: Vite).
 
 `.claude/skills/` holds the design skills Claude reads when working here: `atelier-house-style` (written for this project), `frontend-design` (anthropics/skills, Apache 2.0), `impeccable` (pbakaus/impeccable, Apache 2.0), `taste-skill` (MIT), and three motion skills from mengto/skills (MIT).
 
-Fonts: Italiana and Jost (SIL Open Font License), via Fontsource.
+Fonts: Cormorant Garamond (display) and Hanken Grotesk (text), both SIL Open Font License, via Fontsource. The type scale lives at the top of `src/style.css`.

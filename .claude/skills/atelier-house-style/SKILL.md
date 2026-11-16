@@ -11,9 +11,15 @@ The site is a private viewing in a Florentine palazzo at night: dark rooms, spot
 Nero seppia `#0f0d0b` (base), Pietra serena `#6e746c` (plinths, secondary), Avorio `#eee7da` (text, blueprint paper), Cuoio `#7b4426` (sparingly), Vino `#5a1a1f` (contact, marbled paper), Ottone `#b39258` (brass: buttons, hairlines, foil, never large areas), Ink `#2e4a6b` (blueprint lines only).
 
 ## Type
-- Italiana for display only: headlines, the house names, the stamp. Set it large.
-- Jost (variable, light) for every line of reading text, captions and buttons.
-- Never use the display face for body text. Sentence case everywhere; no all-caps labels.
+- Cormorant Garamond for display: the name (600), section titles (500), Italian words and object names (500 italic).
+- Hanken Grotesk for everything read: body (400), leads (400), captions and labels (500, letter-spaced, brass).
+- Use only the six steps of the scale in `src/style.css` (`--t-hero`, `--t-display`, `--t-title`, `--t-lead`, `--t-body`, `--t-cap`). No ad-hoc sizes.
+- Where an Italian word sits over its English line, the Italian takes `--t-title` and the English 1rem, so both read at the same visual weight.
+- Reading text is never lighter than 400 and never dimmer than `--muted`.
+
+## Logos
+- The houses' official logos live in `src/logos/`, sourced from Wikimedia Commons. Never redraw or retype a logo.
+- They are inlined and take the page's colour; size comes from `logo()` in `src/main.ts`, which balances by visual area.
 
 ## Copy
 - Each section: one Italian title and at most one plain English sentence.
