@@ -3,190 +3,217 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atelier Firenze, leather goods made in Florence</title>
-  <meta name="description" content="A Florentine leather workshop making bags, wallets and small leather goods for the great fashion houses.">
-  <meta name="theme-color" content="#0F0D0B">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F0D0B'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Didot,serif' font-size='20' fill='%23B39258'%3EA%3C/text%3E%3C/svg%3E">
+  <title>Atelier Firenze, pelletteria su misura</title>
+  <meta name="description" content="A leather workshop in Florence that designs and makes bags and leather goods to order.">
+  <meta name="theme-color" content="#f6f1e9">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%235b1a26'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Garamond,serif' font-size='17' fill='%23f6f1e9'%3EAF%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-  <div class="opening" aria-hidden="true"><canvas class="opening__gl"></canvas></div>
-
   <header class="nav">
-    <a class="nav__mark" href="#top" data-name>Atelier Firenze</a>
-    <nav aria-label="Sections">
-      <a href="#vetrina">Vetrina</a>
-      <a href="#disegno">Disegno</a>
-      <a href="#materiali">Materiali</a>
-      <a class="nav__cta" href="#contatti">Book an appointment</a>
+    <nav class="nav__side" aria-label="Sections">
+      <a href="#su-misura">Su misura</a>
+      <a href="#creazioni">Creazioni</a>
+      <a href="#atelier">Atelier</a>
     </nav>
+    <a class="nav__mark" href="#top" data-name>Atelier Firenze</a>
+    <div class="nav__side nav__side--end">
+      <a href="#maisons">Maisons</a>
+      <a class="nav__cta" href="#contatti">Contact</a>
+    </div>
   </header>
 
   <main id="top">
-    <!-- 1. Hero: the aisle of finished bags, in depth -->
+    <!-- Hero -->
     <section class="hero" aria-label="Introduction">
-      <canvas class="hero__gl" aria-hidden="true"></canvas>
-      <img class="hero__fallback" src="img/hero-rows.webp" alt="Rows of finished black top-handle bags in the workshop" fetchpriority="high">
+      <div class="hero__pair">
+        <img src="img/p1437.webp" alt="Cream crocodile top-handle bag with a brass clasp" fetchpriority="high">
+        <img src="img/p1421.webp" alt="Burgundy lizard shoulder bag with a freshwater pearl strap and a cast brass ornament" fetchpriority="high">
+      </div>
       <div class="hero__copy">
         <h1 class="hero__name" data-name>Atelier Firenze</h1>
-        <p class="hero__line">Leather goods made in Florence for the great fashion houses.</p>
-      </div>
-      <a class="hero__cta btn" href="#contatti">Book an appointment</a>
-      <p class="hero__cue" aria-hidden="true">Scroll</p>
-    </section>
-
-    <!-- 2. The houses -->
-    <section class="maisons" aria-labelledby="maisons-title">
-      <h2 class="maisons__intro cap" id="maisons-title">Made in our workshop for</h2>
-      <div class="mband"></div>
-      <figure class="maisons__peek" aria-hidden="true"><img alt=""><figcaption></figcaption></figure>
-    </section>
-
-    <!-- 3. The vitrine: finished pieces in glass cases -->
-    <section class="vetrina" id="vetrina" aria-labelledby="vetrina-title">
-      <div class="vetrina__stage">
-        <canvas class="vetrina__gl"></canvas>
-        <div class="vetrina__head">
-          <h2 class="title" id="vetrina-title">La vetrina</h2>
-          <p class="lede">Pieces from recent production. Move across a case to turn it.</p>
-        </div>
-        <div class="vetrina__label" aria-live="polite">
-          <p class="vetrina__house"></p>
-          <p class="vetrina__object"></p>
-          <p class="vetrina__detail"></p>
-        </div>
-        <p class="vetrina__count cap" aria-hidden="true"></p>
+        <p class="hero__line">Pelletteria su misura, Firenze</p>
+        <a class="btn btn--light" href="#su-misura">Discover</a>
       </div>
     </section>
 
-    <!-- 4. From the drawing to the object -->
-    <section class="disegno" id="disegno" aria-labelledby="disegno-title">
-      <div class="disegno__stage">
-        <canvas class="disegno__gl"></canvas>
-        <img class="disegno__photo" src="img/colour-row.webp" alt="The same box bag in eight colours, finished, on a workshop bench" loading="lazy">
-        <div class="disegno__head">
-          <h2 class="title" id="disegno-title">Dal disegno all'oggetto</h2>
-          <p class="lede">Every piece starts as a paper pattern.</p>
-        </div>
-        <ol class="disegno__steps" aria-label="Stages">
-          <li><em>Cartamodello</em> The pattern is drawn</li>
-          <li><em>Taglio</em> The leather is cut</li>
-          <li><em>Montaggio</em> The panels are assembled</li>
-          <li><em>Colori</em> One shape, eight colours</li>
-          <li><em>Produzione</em> And on the bench</li>
-        </ol>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <div class="card__inner">
-            <div class="card__face card__face--plan" data-plan="tophandle"></div>
-            <div class="card__face card__face--photo"><img src="img/hourglass-photo.webp" alt="Black top-handle bags in production" loading="lazy"></div>
-          </div>
-          <h3><em>Borsa a mano</em> Top-handle bag</h3>
-        </article>
-        <article class="card">
-          <div class="card__inner">
-            <div class="card__face card__face--plan" data-plan="cardholder"></div>
-            <div class="card__face card__face--photo"><img src="img/pink-crate.webp" alt="A crate of printed card holders" loading="lazy"></div>
-          </div>
-          <h3><em>Porta carte</em> Card holder</h3>
-        </article>
-        <article class="card">
-          <div class="card__inner">
-            <div class="card__face card__face--plan" data-plan="zipwallet"></div>
-            <div class="card__face card__face--photo"><img src="img/denim-photo.webp" alt="A denim zip-around wallet" loading="lazy"></div>
-          </div>
-          <h3><em>Portafoglio</em> Zip wallet</h3>
-        </article>
-        <article class="card">
-          <div class="card__inner">
-            <div class="card__face card__face--plan" data-plan="tote"></div>
-            <div class="card__face card__face--photo"><img src="img/pink-cognac.webp" alt="Rows of small totes in pink and cognac" loading="lazy"></div>
-          </div>
-          <h3><em>Shopper</em> Small tote</h3>
-        </article>
+    <!-- Su misura: intro -->
+    <section class="intro" id="su-misura" aria-labelledby="sm-title">
+      <p class="label">Su misura</p>
+      <h2 class="h1" id="sm-title">From the first sketch<br>to the finished piece</h2>
+      <p class="body intro__text">We design and make leather goods to order. A single bespoke bag or a full collection under your own name: we draw it with you, choose the leather and the hardware, build the prototype and make every piece in our workshop in Florence.</p>
+    </section>
+
+    <!-- Step 1 -->
+    <section class="step step--wide" aria-labelledby="s1">
+      <figure class="step__img"><img src="img/p1427.webp" alt="Two grained-leather totes, grey and burgundy, on the workbench beside knives and a steel ruler" loading="lazy"></figure>
+      <div class="step__text">
+        <p class="label">01 · Il disegno</p>
+        <h3 class="h2" id="s1">The design</h3>
+        <p class="body">It starts with your idea: a sketch, a reference or a feeling. We turn it into a pattern, piece by piece, on the bench.</p>
       </div>
     </section>
 
-    <!-- 5. Production -->
-    <section class="produzione" aria-labelledby="produzione-title">
-      <div class="produzione__track">
-        <div class="produzione__head">
-          <h2 class="title" id="produzione-title">Da un campione alla serie</h2>
-          <p class="lede">One sample first, then the full run.</p>
-        </div>
-        <figure class="frame frame--tall"><img src="img/pink-cognac.webp" alt="Small totes lined up in pink and cognac" loading="lazy"><figcaption>Totes in pink and cognac</figcaption></figure>
-        <figure class="frame frame--wide"><img src="img/row.webp" alt="A long shelf of identical black totes" loading="lazy"><figcaption>A run of black totes</figcaption></figure>
-        <figure class="frame frame--tall"><img src="img/pink-crate.webp" alt="Printed card holders stacked in a crate" loading="lazy"><figcaption>Card holders before packing</figcaption></figure>
-        <figure class="frame frame--wide"><img src="img/construction.webp" alt="Black calf bags with brass eyelets on a rack" loading="lazy"><figcaption>Bags on the rack between stages</figcaption></figure>
-        <figure class="frame frame--wide"><img src="img/workshop.webp" alt="The long workroom with sewing benches" loading="lazy"><figcaption>The workroom</figcaption></figure>
+    <!-- Step 2 -->
+    <section class="step step--rev band band--emerald" aria-labelledby="s2">
+      <figure class="step__img"><img src="img/p1428.webp" alt="A saffron grained-leather prototype bag on a green cutting mat" loading="lazy"></figure>
+      <div class="step__text">
+        <p class="label">02 · Il prototipo</p>
+        <h3 class="h2" id="s2">The prototype</h3>
+        <p class="body">A first sample is cut and stitched by hand, so you can hold it, wear it and change it before anything goes into production.</p>
       </div>
     </section>
 
-    <!-- 6. Materials -->
-    <section class="materiali" id="materiali" aria-labelledby="materiali-title">
-      <div class="croc">
-        <canvas class="croc__gl" aria-hidden="true"></canvas>
-        <img class="croc__fallback" src="img/croc.webp" alt="Glazed crocodile hides with a suede shoe laid on top" loading="lazy">
-        <div class="croc__copy">
-          <h2 class="title" id="materiali-title">I materiali</h2>
-          <p class="lede">From calf and saffiano to printed leather, denim and crocodile.</p>
-        </div>
-        <p class="croc__caption"><em>Coccodrillo lucido</em> Glazed crocodile</p>
+    <!-- Step 3 -->
+    <section class="colours band band--burgundy" aria-labelledby="s3">
+      <div class="colours__head">
+        <p class="label">03 · Materiali e colori</p>
+        <h3 class="h2" id="s3">Leather and colour</h3>
+        <p class="body">Every shape can be made in any leather and any colour.</p>
       </div>
-      <ul class="swatches">
-        <li class="swatch"><div class="swatch__tile"><img src="img/sw-saffiano.webp" alt="" loading="lazy"></div><p><em>Saffiano</em> Cross-hatched calf</p></li>
-        <li class="swatch"><div class="swatch__tile"><img src="img/sw-calf.webp" alt="" loading="lazy"></div><p><em>Vitello liscio</em> Smooth calf</p></li>
-        <li class="swatch"><div class="swatch__tile"><img src="img/sw-grained.webp" alt="" loading="lazy"></div><p><em>Vitello martellato</em> Grained calf</p></li>
-        <li class="swatch"><div class="swatch__tile"><img src="img/sw-quilted.webp" alt="" loading="lazy"></div><p><em>Trapuntato</em> Quilted and embossed</p></li>
-        <li class="swatch"><div class="swatch__tile"><img src="img/sw-printed.webp" alt="" loading="lazy"></div><p><em>Stampa ciliegia</em> Cherry print</p></li>
-        <li class="swatch"><div class="swatch__tile"><img src="img/sw-bunny.webp" alt="" loading="lazy"></div><p><em>Stampa coniglietti</em> Bunny print</p></li>
-        <li class="swatch"><div class="swatch__tile"><img src="img/sw-denim.webp" alt="" loading="lazy"></div><p><em>Denim</em> Washed denim</p></li>
-        <li class="swatch"><div class="swatch__tile"><img src="img/sw-croc.webp" alt="" loading="lazy"></div><p><em>Coccodrillo</em> Crocodile</p></li>
+      <div class="colours__grid">
+        <figure><img src="img/p1429.webp" alt="Three metallic suede saddle bags in fuchsia, saffron and pink on a white fur throw beside a tufted leather chair" loading="lazy"></figure>
+        <figure><img src="img/p1425.webp" alt="Three red grained-leather saddle bags on a wooden bench against a red wall, tools behind" loading="lazy"></figure>
+        <figure><img src="img/c1426.webp" alt="Three smooth calf bags in lilac, grey and peach with silver buckles" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- Step 4 -->
+    <section class="step step--wide" aria-labelledby="s4">
+      <figure class="step__img"><img src="img/o-workshop.webp" alt="The long workroom with sewing benches, rolls of leather and finished totes" loading="lazy"></figure>
+      <div class="step__text">
+        <p class="label">04 · La produzione</p>
+        <h3 class="h2" id="s4">Production</h3>
+        <p class="body">Once the sample is right, the same hands make the run, from one piece to many, under your name and with your label.</p>
+      </div>
+    </section>
+
+    <!-- Materials -->
+    <section class="swatches band band--saffron" aria-labelledby="mat-title">
+      <div class="sec-head">
+        <p class="label">I materiali</p>
+        <h2 class="h1" id="mat-title">The leathers</h2>
+      </div>
+      <ul class="tiles">
+        <li><img src="img/m-croc.webp" alt="" loading="lazy"><p>Crocodile</p></li>
+        <li><img src="img/m-lizard.webp" alt="" loading="lazy"><p>Lizard</p></li>
+        <li><img src="img/m-burgundy.webp" alt="" loading="lazy"><p>Embossed lizard</p></li>
+        <li><img src="img/m-snake.webp" alt="" loading="lazy"><p>Python</p></li>
+        <li><img src="img/m-calf.webp" alt="" loading="lazy"><p>Smooth calf</p></li>
+        <li><img src="img/m-grained.webp" alt="" loading="lazy"><p>Grained calf</p></li>
+        <li><img src="img/m-suede.webp" alt="" loading="lazy"><p>Metallic suede</p></li>
+        <li><img src="img/m-houndstooth.webp" alt="" loading="lazy"><p>Houndstooth canvas</p></li>
       </ul>
     </section>
 
-    <!-- 7. The hands -->
-    <section class="mani" aria-labelledby="mani-title">
-      <div class="mani__head">
-        <h2 class="title" id="mani-title">Le mani</h2>
-        <p class="lede">Cut, assembled and checked in our workshop.</p>
+    <!-- Hardware -->
+    <section class="swatches band band--fuchsia" aria-labelledby="hw-title">
+      <div class="sec-head">
+        <p class="label">I dettagli</p>
+        <h2 class="h1" id="hw-title">Hardware and finishing</h2>
       </div>
-      <div class="mani__grid">
-        <figure class="shot shot--a"><div class="shot__img"><img src="img/inspection.webp" alt="Hands pressing test tape onto the flap of a black bag" loading="lazy"></div><figcaption>Testing the finish on a flap</figcaption></figure>
-        <figure class="shot shot--b"><div class="shot__img"><img src="img/interior.webp" alt="An open black bag showing its lining and stamped label, an artisan at the bench behind" loading="lazy"></div><figcaption>A finished interior, label stamped</figcaption></figure>
-        <figure class="shot shot--c"><div class="shot__img"><img src="img/workshop.webp" alt="The workroom with sewing benches and rolls of leather" loading="lazy"></div><figcaption>Benches and rolls of hide</figcaption></figure>
-        <figure class="shot shot--d"><div class="shot__img"><img src="img/cerbero.webp" alt="A large Cerbero machine on the workshop floor" loading="lazy"></div><figcaption>The Cerbero, on the floor</figcaption></figure>
+      <ul class="tiles">
+        <li><img src="img/h-pearls.webp" alt="" loading="lazy"><p>Freshwater pearls</p></li>
+        <li><img src="img/h-ornament.webp" alt="" loading="lazy"><p>Cast brass ornament</p></li>
+        <li><img src="img/h-jewel.webp" alt="" loading="lazy"><p>Jewelled clasp</p></li>
+        <li><img src="img/h-wood.webp" alt="" loading="lazy"><p>Carved wood handle</p></li>
+        <li><img src="img/h-turnlock.webp" alt="" loading="lazy"><p>Turn-lock</p></li>
+        <li><img src="img/h-clasp.webp" alt="" loading="lazy"><p>Gold clasp</p></li>
+        <li><img src="img/h-buckle.webp" alt="" loading="lazy"><p>Polished buckle</p></li>
+        <li><img src="img/h-silverbuckle.webp" alt="" loading="lazy"><p>Quilting and buckle</p></li>
+      </ul>
+      <a class="btn btn--light swatches__cta" href="#contatti">Start a custom project</a>
+    </section>
+
+    <!-- Creazioni -->
+    <section class="creazioni" id="creazioni" aria-labelledby="cr-title">
+      <div class="sec-head sec-head--center">
+        <p class="label">Le creazioni</p>
+        <h2 class="h1" id="cr-title">Our pieces</h2>
+      </div>
+      <div class="gallery">
+        <figure class="g g--feature"><img src="img/p1438.webp" alt="Grey crocodile dome bag beside pink ranunculus" loading="lazy"><figcaption>Grey crocodile</figcaption></figure>
+        <figure class="g"><img src="img/p1423.webp" alt="Emerald calf bag with a carved wooden handle on rose-gold foil" loading="lazy"><figcaption>Emerald calf, wooden handle</figcaption></figure>
+        <figure class="g"><img src="img/c1434.webp" alt="Black smooth calf shoulder bag with a gold chain" loading="lazy"><figcaption>Black calf, gold chain</figcaption></figure>
+        <figure class="g"><img src="img/p1422.webp" alt="Tan lizard top-handle bag on a green leather armchair" loading="lazy"><figcaption>Tan lizard</figcaption></figure>
+        <figure class="g"><img src="img/p1424.webp" alt="Cornflower blue calf bag with a gold chain on blue velvet" loading="lazy"><figcaption>Blue calf, gold chain</figcaption></figure>
+        <figure class="g"><img src="img/p1432.webp" alt="Black crocodile top-handle bag on a white fur throw before a tufted leather chair" loading="lazy"><figcaption>Black crocodile</figcaption></figure>
+        <figure class="g"><img src="img/c1440.webp" alt="Grey lizard bag with a jewelled star clasp" loading="lazy"><figcaption>Grey lizard, jewelled clasp</figcaption></figure>
+        <figure class="g"><img src="img/c1435.webp" alt="Grey crocodile top-handle bag with gold clasp" loading="lazy"><figcaption>Grey crocodile, gold clasp</figcaption></figure>
+        <figure class="g"><img src="img/p1431.webp" alt="Three houndstooth canvas and leather bags on a fur throw" loading="lazy"><figcaption>Houndstooth canvas and calf</figcaption></figure>
+        <figure class="g"><img src="img/p1430.webp" alt="Black grained tote with a green python flap" loading="lazy"><figcaption>Grained calf, python flap</figcaption></figure>
+        <figure class="g"><img src="img/c1433.webp" alt="Silver metallic quilted shoulder bag with a chain" loading="lazy"><figcaption>Metallic quilted leather</figcaption></figure>
+        <figure class="g"><img src="img/p1439.webp" alt="Black calf top-handle bag with a gold turn-lock before a terracotta vase" loading="lazy"><figcaption>Black calf, turn-lock</figcaption></figure>
+        <figure class="g"><img src="img/c1436.webp" alt="Black and white lizard baguette with a chain" loading="lazy"><figcaption>Natural lizard</figcaption></figure>
       </div>
     </section>
 
-    <!-- 8. Florence -->
-    <section class="firenze" aria-label="Florence">
-      <canvas class="marble" data-tone="day" data-word="Firenze" aria-hidden="true"></canvas>
-      <p class="firenze__word">Firenze</p>
-      <p class="firenze__line cap">Fatto in Italia</p>
+    <!-- Atelier -->
+    <section class="atelier band band--blue" id="atelier" aria-labelledby="at-title">
+      <div class="sec-head">
+        <p class="label">L'atelier</p>
+        <h2 class="h1" id="at-title">The workshop</h2>
+        <p class="body">Cutting, skiving, stitching and finishing, all under one roof in Florence.</p>
+      </div>
+      <div class="atelier__grid">
+        <figure class="a1"><img src="img/o-inspection.webp" alt="Hands testing the finish on the flap of a black bag" loading="lazy"><figcaption>Checking the finish</figcaption></figure>
+        <figure class="a2"><img src="img/o-interior.webp" alt="An open black bag on the cutting table, an artisan behind" loading="lazy"><figcaption>At the cutting table</figcaption></figure>
+        <figure class="a3"><img src="img/o-construction.webp" alt="Black calf bags with brass eyelets on a rack" loading="lazy"><figcaption>Between stages</figcaption></figure>
+        <figure class="a4"><img src="img/o-cerbero.webp" alt="A Cerbero machine on the workshop floor" loading="lazy"><figcaption>On the floor</figcaption></figure>
+        <figure class="a5"><img src="img/o-row.webp" alt="A row of finished black totes" loading="lazy"><figcaption>A finished run</figcaption></figure>
+      </div>
     </section>
 
-    <!-- 9. Contact -->
-    <section class="contatti" id="contatti" aria-labelledby="contatti-title">
-      <canvas class="marble" data-tone="night" aria-hidden="true"></canvas>
-      <div class="contatti__inner">
-        <h2 class="contatti__title" id="contatti-title">Scriveteci</h2>
-        <p class="lede">For appointments, samples and the catalogue.</p>
-        <form class="form" novalidate>
-          <label>Your name<input name="name" autocomplete="name" required></label>
-          <label>House or company<input name="company" autocomplete="organization"></label>
-          <label>Email<input name="email" type="email" autocomplete="email" required></label>
-          <label class="form__wide">What would you like to make?<textarea name="brief" rows="3"></textarea></label>
-          <button type="submit">Request an appointment</button>
-          <p class="form__status" role="status" aria-live="polite"></p>
-        </form>
+    <!-- Maisons -->
+    <section class="maisons" id="maisons" aria-labelledby="ma-title">
+      <div class="sec-head sec-head--center">
+        <p class="label">Le maisons</p>
+        <h2 class="h1" id="ma-title">Houses we have produced for</h2>
+        <p class="body">In the past, our workshop has made pieces for these houses.</p>
       </div>
-      <footer class="foot">
-        <p data-name>Atelier Firenze</p>
-        <p>Firenze, Italia</p>
-      </footer>
+      <ul class="logos"></ul>
+      <p class="label archive__label">From past production</p>
+      <div class="archive">
+        <figure><img src="img/o-embossed.webp" alt="Quilted top-handle bag with an embossed monogram" loading="lazy"></figure>
+        <figure><img src="img/o-cherry.webp" alt="Cherry-print calfskin pouch with a gold monogram" loading="lazy"></figure>
+        <figure><img src="img/o-components.webp" alt="Stacks of grained black wallets with four white corner stitches" loading="lazy"></figure>
+        <figure><img src="img/o-denim.webp" alt="Denim zip-around wallet" loading="lazy"></figure>
+        <figure><img src="img/o-rows.webp" alt="Rows of finished black top-handle bags" loading="lazy"></figure>
+        <figure><img src="img/o-pinkcrate.webp" alt="A crate of printed pink card holders" loading="lazy"></figure>
+        <figure><img src="img/o-colourrow.webp" alt="The same shoulder bag in eight colours" loading="lazy"></figure>
+        <figure><img src="img/o-pinkcognac.webp" alt="Rows of small totes in pink and cognac" loading="lazy"></figure>
+        <figure><img src="img/o-crocshoe.webp" alt="Glazed crocodile hides with a suede wingtip shoe" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contatti band band--burgundy" id="contatti" aria-labelledby="co-title">
+      <div class="contatti__head">
+        <p class="label">Contatti</p>
+        <h2 class="h1" id="co-title">Start a custom project</h2>
+        <p class="body">Tell us what you would like to make. We reply to every enquiry personally.</p>
+      </div>
+      <form class="form" novalidate>
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>House or company<input name="company" autocomplete="organization"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Piece
+          <select name="piece"><option>Handbag</option><option>Small leather goods</option><option>Belts</option><option>A collection</option><option>Something else</option></select>
+        </label>
+        <label>Quantity
+          <select name="qty"><option>A single piece</option><option>A small series</option><option>A production run</option></select>
+        </label>
+        <label>Timing<input name="timing" placeholder="When do you need it?"></label>
+        <label class="form__wide">Your idea<textarea name="brief" rows="4" placeholder="Shape, leather, colour, hardware, references"></textarea></label>
+        <button class="btn btn--light" type="submit">Send enquiry</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
+
+  <footer class="foot">
+    <p class="foot__mark" data-name>Atelier Firenze</p>
+    <p class="label">Pelletteria su misura · Firenze, Italia</p>
+  </footer>
 
   <script type="module" src="/src/main.ts"></script>
 </body>
