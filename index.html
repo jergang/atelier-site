@@ -6,6 +6,12 @@
   <title>Atelier Firenze, pelletteria su misura</title>
   <meta name="description" content="A leather workshop in Florence that designs and makes bags and leather goods to order.">
   <meta name="theme-color" content="#f6f1e9">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Atelier Firenze, pelletteria su misura">
+  <meta property="og:description" content="Leather goods designed and made to order in Florence.">
+  <meta property="og:image" content="https://atelier-site-ebod.vercel.app/og.jpg">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%235b1a26'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Garamond,serif' font-size='17' fill='%23f6f1e9'%3EAF%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -26,13 +32,14 @@
     <!-- Hero -->
     <section class="hero" aria-label="Introduction">
       <div class="hero__pair">
-        <img src="img/p1437.webp" alt="Cream crocodile top-handle bag with a brass clasp" fetchpriority="high">
-        <img src="img/p1421.webp" alt="Burgundy lizard shoulder bag with a freshwater pearl strap and a cast brass ornament" fetchpriority="high">
+        <img src="img/p1437.webp" srcset="img/p1437-s.webp 800w, img/p1437.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Cream crocodile top-handle bag with a brass clasp" fetchpriority="high">
+        <img src="img/p1421.webp" srcset="img/p1421-s.webp 800w, img/p1421.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Burgundy lizard shoulder bag with a freshwater pearl strap and a cast brass ornament" fetchpriority="high">
       </div>
       <div class="hero__copy">
+        <p class="hero__eyebrow">Fatto a mano a Firenze</p>
         <h1 class="hero__name" data-name>Atelier Firenze</h1>
-        <p class="hero__line">Pelletteria su misura, Firenze</p>
-        <a class="btn btn--light" href="#su-misura">Discover</a>
+        <p class="hero__line">Pelletteria su misura</p>
+        <div class="hero__ctas"><a class="btn btn--light" href="#su-misura">Discover</a><a class="btn btn--ghost" href="#contatti">Start a project</a></div>
       </div>
     </section>
 
@@ -45,7 +52,7 @@
 
     <!-- Step 1 -->
     <section class="step step--wide" aria-labelledby="s1">
-      <figure class="step__img"><img src="img/p1427.webp" alt="Two grained-leather totes, grey and burgundy, on the workbench beside knives and a steel ruler" loading="lazy"></figure>
+      <figure class="step__img"><img src="img/p1427.webp" srcset="img/p1427-s.webp 800w, img/p1427.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Two grained-leather totes, grey and burgundy, on the workbench beside knives and a steel ruler" loading="lazy"></figure>
       <div class="step__text">
         <p class="label">01 · Il disegno</p>
         <h3 class="h2" id="s1">The design</h3>
@@ -55,7 +62,7 @@
 
     <!-- Step 2 -->
     <section class="step step--rev band band--emerald" aria-labelledby="s2">
-      <figure class="step__img"><img src="img/p1428.webp" alt="A saffron grained-leather prototype bag on a green cutting mat" loading="lazy"></figure>
+      <figure class="step__img"><img src="img/p1428.webp" srcset="img/p1428-s.webp 800w, img/p1428.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="A saffron grained-leather prototype bag on a green cutting mat" loading="lazy"></figure>
       <div class="step__text">
         <p class="label">02 · Il prototipo</p>
         <h3 class="h2" id="s2">The prototype</h3>
@@ -71,20 +78,39 @@
         <p class="body">Every shape can be made in any leather and any colour.</p>
       </div>
       <div class="colours__grid">
-        <figure><img src="img/p1429.webp" alt="Three metallic suede saddle bags in fuchsia, saffron and pink on a white fur throw beside a tufted leather chair" loading="lazy"></figure>
-        <figure><img src="img/p1425.webp" alt="Three red grained-leather saddle bags on a wooden bench against a red wall, tools behind" loading="lazy"></figure>
-        <figure><img src="img/c1426.webp" alt="Three smooth calf bags in lilac, grey and peach with silver buckles" loading="lazy"></figure>
+        <figure><img src="img/p1429.webp" srcset="img/p1429-s.webp 800w, img/p1429.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Three metallic suede saddle bags in fuchsia, saffron and pink on a white fur throw beside a tufted leather chair" loading="lazy"></figure>
+        <figure><img src="img/p1425.webp" srcset="img/p1425-s.webp 800w, img/p1425.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Three red grained-leather saddle bags on a wooden bench against a red wall, tools behind" loading="lazy"></figure>
+        <figure><img src="img/p1426.webp" srcset="img/p1426-s.webp 800w, img/p1426.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Three smooth calf bags in lilac, grey and peach with silver buckles" loading="lazy"></figure>
       </div>
     </section>
 
     <!-- Step 4 -->
     <section class="step step--wide" aria-labelledby="s4">
-      <figure class="step__img"><img src="img/o-workshop.webp" alt="The long workroom with sewing benches, rolls of leather and finished totes" loading="lazy"></figure>
+      <figure class="step__img"><img src="img/o-workshop.webp" srcset="img/o-workshop-s.webp 800w, img/o-workshop.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="The long workroom with sewing benches, rolls of leather and finished totes" loading="lazy"></figure>
       <div class="step__text">
         <p class="label">04 · La produzione</p>
         <h3 class="h2" id="s4">Production</h3>
         <p class="body">Once the sample is right, the same hands make the run, from one piece to many, under your name and with your label.</p>
       </div>
+    </section>
+
+
+    <!-- Cosa realizziamo -->
+    <section class="make" aria-labelledby="mk-title">
+      <div class="sec-head">
+        <p class="label">Cosa realizziamo</p>
+        <h2 class="h1" id="mk-title">What we make</h2>
+      </div>
+      <ol class="make__list">
+        <li><span>01</span>Handbags</li>
+        <li><span>02</span>Small leather goods</li>
+        <li><span>03</span>Belts and straps</li>
+        <li><span>04</span>Exotic leathers</li>
+        <li><span>05</span>Private label collections</li>
+        <li><span>06</span>Samples and prototypes</li>
+        <li><span>07</span>Bespoke single pieces</li>
+        <li><span>08</span>Corporate and private gifts</li>
+      </ol>
     </section>
 
     <!-- Materials -->
@@ -94,14 +120,14 @@
         <h2 class="h1" id="mat-title">The leathers</h2>
       </div>
       <ul class="tiles">
-        <li><img src="img/m-croc.webp" alt="" loading="lazy"><p>Crocodile</p></li>
-        <li><img src="img/m-lizard.webp" alt="" loading="lazy"><p>Lizard</p></li>
-        <li><img src="img/m-burgundy.webp" alt="" loading="lazy"><p>Embossed lizard</p></li>
-        <li><img src="img/m-snake.webp" alt="" loading="lazy"><p>Python</p></li>
-        <li><img src="img/m-calf.webp" alt="" loading="lazy"><p>Smooth calf</p></li>
-        <li><img src="img/m-grained.webp" alt="" loading="lazy"><p>Grained calf</p></li>
-        <li><img src="img/m-suede.webp" alt="" loading="lazy"><p>Metallic suede</p></li>
-        <li><img src="img/m-houndstooth.webp" alt="" loading="lazy"><p>Houndstooth canvas</p></li>
+        <li><figure><img src="img/mat-croc.webp" alt="Glazed black crocodile leather" loading="lazy"><figcaption>Glazed crocodile</figcaption></figure></li>
+        <li><figure><img src="img/mat-hornback.webp" alt="Gold hornback crocodile leather" loading="lazy"><figcaption>Hornback crocodile</figcaption></figure></li>
+        <li><figure><img src="img/mat-lizard.webp" alt="Taupe lizard leather" loading="lazy"><figcaption>Lizard</figcaption></figure></li>
+        <li><figure><img src="img/mat-python.webp" alt="Python leather" loading="lazy"><figcaption>Python</figcaption></figure></li>
+        <li><figure><img src="img/mat-calf.webp" alt="Tan calf leather" loading="lazy"><figcaption>Calf</figcaption></figure></li>
+        <li><figure><img src="img/mat-grained.webp" alt="Black grained calf leather" loading="lazy"><figcaption>Grained calf</figcaption></figure></li>
+        <li><figure><img src="img/mat-suede.webp" alt="Sand suede" loading="lazy"><figcaption>Suede</figcaption></figure></li>
+        <li><figure><img src="img/mat-houndstooth.webp" alt="Houndstooth wool" loading="lazy"><figcaption>Houndstooth</figcaption></figure></li>
       </ul>
     </section>
 
@@ -112,14 +138,14 @@
         <h2 class="h1" id="hw-title">Hardware and finishing</h2>
       </div>
       <ul class="tiles">
-        <li><img src="img/h-pearls.webp" alt="" loading="lazy"><p>Freshwater pearls</p></li>
-        <li><img src="img/h-ornament.webp" alt="" loading="lazy"><p>Cast brass ornament</p></li>
-        <li><img src="img/h-jewel.webp" alt="" loading="lazy"><p>Jewelled clasp</p></li>
-        <li><img src="img/h-wood.webp" alt="" loading="lazy"><p>Carved wood handle</p></li>
-        <li><img src="img/h-turnlock.webp" alt="" loading="lazy"><p>Turn-lock</p></li>
-        <li><img src="img/h-clasp.webp" alt="" loading="lazy"><p>Gold clasp</p></li>
-        <li><img src="img/h-buckle.webp" alt="" loading="lazy"><p>Polished buckle</p></li>
-        <li><img src="img/h-silverbuckle.webp" alt="" loading="lazy"><p>Quilting and buckle</p></li>
+        <li><figure><img src="img/h-pearls.webp" alt="Freshwater pearls" loading="lazy"><figcaption>Freshwater pearls</figcaption></figure></li>
+        <li><figure><img src="img/h-ornament.webp" alt="Cast brass ornament" loading="lazy"><figcaption>Cast brass ornament</figcaption></figure></li>
+        <li><figure><img src="img/h-jewel.webp" alt="Jewelled clasp" loading="lazy"><figcaption>Jewelled clasp</figcaption></figure></li>
+        <li><figure><img src="img/h-wood.webp" alt="Carved wood handle" loading="lazy"><figcaption>Carved wood handle</figcaption></figure></li>
+        <li><figure><img src="img/h-turnlock.webp" alt="Turn-lock" loading="lazy"><figcaption>Turn-lock</figcaption></figure></li>
+        <li><figure><img src="img/h-clasp.webp" alt="Gold clasp" loading="lazy"><figcaption>Gold clasp</figcaption></figure></li>
+        <li><figure><img src="img/h-buckle.webp" alt="Polished buckle" loading="lazy"><figcaption>Polished buckle</figcaption></figure></li>
+        <li><figure><img src="img/h-silverbuckle.webp" alt="Quilting and buckle" loading="lazy"><figcaption>Quilting and buckle</figcaption></figure></li>
       </ul>
       <a class="btn btn--light swatches__cta" href="#contatti">Start a custom project</a>
     </section>
@@ -131,19 +157,19 @@
         <h2 class="h1" id="cr-title">Our pieces</h2>
       </div>
       <div class="gallery">
-        <figure class="g g--feature"><img src="img/p1438.webp" alt="Grey crocodile dome bag beside pink ranunculus" loading="lazy"><figcaption>Grey crocodile</figcaption></figure>
-        <figure class="g"><img src="img/p1423.webp" alt="Emerald calf bag with a carved wooden handle on rose-gold foil" loading="lazy"><figcaption>Emerald calf, wooden handle</figcaption></figure>
-        <figure class="g"><img src="img/c1434.webp" alt="Black smooth calf shoulder bag with a gold chain" loading="lazy"><figcaption>Black calf, gold chain</figcaption></figure>
-        <figure class="g"><img src="img/p1422.webp" alt="Tan lizard top-handle bag on a green leather armchair" loading="lazy"><figcaption>Tan lizard</figcaption></figure>
-        <figure class="g"><img src="img/p1424.webp" alt="Cornflower blue calf bag with a gold chain on blue velvet" loading="lazy"><figcaption>Blue calf, gold chain</figcaption></figure>
-        <figure class="g"><img src="img/p1432.webp" alt="Black crocodile top-handle bag on a white fur throw before a tufted leather chair" loading="lazy"><figcaption>Black crocodile</figcaption></figure>
-        <figure class="g"><img src="img/c1440.webp" alt="Grey lizard bag with a jewelled star clasp" loading="lazy"><figcaption>Grey lizard, jewelled clasp</figcaption></figure>
-        <figure class="g"><img src="img/c1435.webp" alt="Grey crocodile top-handle bag with gold clasp" loading="lazy"><figcaption>Grey crocodile, gold clasp</figcaption></figure>
-        <figure class="g"><img src="img/p1431.webp" alt="Three houndstooth canvas and leather bags on a fur throw" loading="lazy"><figcaption>Houndstooth canvas and calf</figcaption></figure>
-        <figure class="g"><img src="img/p1430.webp" alt="Black grained tote with a green python flap" loading="lazy"><figcaption>Grained calf, python flap</figcaption></figure>
-        <figure class="g"><img src="img/c1433.webp" alt="Silver metallic quilted shoulder bag with a chain" loading="lazy"><figcaption>Metallic quilted leather</figcaption></figure>
-        <figure class="g"><img src="img/p1439.webp" alt="Black calf top-handle bag with a gold turn-lock before a terracotta vase" loading="lazy"><figcaption>Black calf, turn-lock</figcaption></figure>
-        <figure class="g"><img src="img/c1436.webp" alt="Black and white lizard baguette with a chain" loading="lazy"><figcaption>Natural lizard</figcaption></figure>
+        <figure class="g g--feature"><img src="img/p1438.webp" srcset="img/p1438-s.webp 800w, img/p1438.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Grey crocodile dome bag beside pink ranunculus" loading="lazy"><figcaption>Grey crocodile</figcaption></figure>
+        <figure class="g"><img src="img/p1423.webp" srcset="img/p1423-s.webp 800w, img/p1423.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Emerald calf bag with a carved wooden handle on rose-gold foil" loading="lazy"><figcaption>Emerald calf, wooden handle</figcaption></figure>
+        <figure class="g"><img src="img/c1434.webp" srcset="img/c1434-s.webp 800w, img/c1434.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Black smooth calf shoulder bag with a gold chain" loading="lazy"><figcaption>Black calf, gold chain</figcaption></figure>
+        <figure class="g"><img src="img/p1422.webp" srcset="img/p1422-s.webp 800w, img/p1422.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Tan lizard top-handle bag on a green leather armchair" loading="lazy"><figcaption>Tan lizard</figcaption></figure>
+        <figure class="g"><img src="img/p1424.webp" srcset="img/p1424-s.webp 800w, img/p1424.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Cornflower blue calf bag with a gold chain on blue velvet" loading="lazy"><figcaption>Blue calf, gold chain</figcaption></figure>
+        <figure class="g"><img src="img/p1432.webp" srcset="img/p1432-s.webp 800w, img/p1432.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Black crocodile top-handle bag on a white fur throw before a tufted leather chair" loading="lazy"><figcaption>Black crocodile</figcaption></figure>
+        <figure class="g"><img src="img/p1440.webp" srcset="img/p1440-s.webp 800w, img/p1440.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Grey lizard bag with a jewelled star clasp" loading="lazy"><figcaption>Grey lizard, jewelled clasp</figcaption></figure>
+        <figure class="g"><img src="img/c1435.webp" srcset="img/c1435-s.webp 800w, img/c1435.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Grey crocodile top-handle bag with gold clasp" loading="lazy"><figcaption>Grey crocodile, gold clasp</figcaption></figure>
+        <figure class="g"><img src="img/p1431.webp" srcset="img/p1431-s.webp 800w, img/p1431.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Three houndstooth canvas and leather bags on a fur throw" loading="lazy"><figcaption>Houndstooth canvas and calf</figcaption></figure>
+        <figure class="g"><img src="img/p1430.webp" srcset="img/p1430-s.webp 800w, img/p1430.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Black grained tote with a green python flap" loading="lazy"><figcaption>Grained calf, python flap</figcaption></figure>
+        <figure class="g"><img src="img/p1433.webp" srcset="img/p1433-s.webp 800w, img/p1433.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Silver metallic quilted shoulder bag with a chain" loading="lazy"><figcaption>Metallic quilted leather</figcaption></figure>
+        <figure class="g"><img src="img/p1439.webp" srcset="img/p1439-s.webp 800w, img/p1439.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Black calf top-handle bag with a gold turn-lock before a terracotta vase" loading="lazy"><figcaption>Black calf, turn-lock</figcaption></figure>
+        <figure class="g"><img src="img/p1436.webp" srcset="img/p1436-s.webp 800w, img/p1436.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Black and white lizard baguette with a chain" loading="lazy"><figcaption>Natural lizard</figcaption></figure>
       </div>
     </section>
 
@@ -155,11 +181,23 @@
         <p class="body">Cutting, skiving, stitching and finishing, all under one roof in Florence.</p>
       </div>
       <div class="atelier__grid">
-        <figure class="a1"><img src="img/o-inspection.webp" alt="Hands testing the finish on the flap of a black bag" loading="lazy"><figcaption>Checking the finish</figcaption></figure>
-        <figure class="a2"><img src="img/o-interior.webp" alt="An open black bag on the cutting table, an artisan behind" loading="lazy"><figcaption>At the cutting table</figcaption></figure>
-        <figure class="a3"><img src="img/o-construction.webp" alt="Black calf bags with brass eyelets on a rack" loading="lazy"><figcaption>Between stages</figcaption></figure>
-        <figure class="a4"><img src="img/o-cerbero.webp" alt="A Cerbero machine on the workshop floor" loading="lazy"><figcaption>On the floor</figcaption></figure>
-        <figure class="a5"><img src="img/o-row.webp" alt="A row of finished black totes" loading="lazy"><figcaption>A finished run</figcaption></figure>
+        <figure class="a1"><img src="img/o-inspection.webp" srcset="img/o-inspection-s.webp 800w, img/o-inspection.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Hands testing the finish on the flap of a black bag" loading="lazy"><figcaption>Checking the finish</figcaption></figure>
+        <figure class="a2"><img src="img/o-interior.webp" srcset="img/o-interior-s.webp 800w, img/o-interior.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="An open black bag on the cutting table, an artisan behind" loading="lazy"><figcaption>At the cutting table</figcaption></figure>
+        <figure class="a3"><img src="img/o-construction.webp" srcset="img/o-construction-s.webp 800w, img/o-construction.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Black calf bags with brass eyelets on a rack" loading="lazy"><figcaption>Between stages</figcaption></figure>
+        <figure class="a4"><img src="img/o-cerbero.webp" srcset="img/o-cerbero-s.webp 800w, img/o-cerbero.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="A Cerbero machine on the workshop floor" loading="lazy"><figcaption>On the floor</figcaption></figure>
+        <figure class="a5"><img src="img/o-row.webp" srcset="img/o-row-s.webp 800w, img/o-row.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="A row of finished black totes" loading="lazy"><figcaption>A finished run</figcaption></figure>
+      </div>
+    </section>
+
+
+    <!-- Heritage -->
+    <section class="heritage band band--emerald" aria-labelledby="he-title">
+      <figure class="heritage__img"><img src="img/firenze.webp" alt="The Ponte Vecchio over the Arno, Florence" loading="lazy"></figure>
+      <div class="heritage__text">
+        <p class="label">Una tradizione fiorentina</p>
+        <h2 class="h1" id="he-title">Florence and leather</h2>
+        <p class="body">Florence has worked leather for more than seven centuries. The leatherworkers' guild, the Arte dei Cuoiai e Galigai, was founded here in the thirteenth century, and the streets around Santa Croce still carry the names of the trade: Via delle Conce, Via dei Conciatori.</p>
+        <p class="body">Downriver, between Florence and Pisa, the tanneries of Santa Croce sull'Arno still prepare the hides. Our workshop belongs to that tradition.</p>
       </div>
     </section>
 
@@ -173,15 +211,34 @@
       <ul class="logos"></ul>
       <p class="label archive__label">From past production</p>
       <div class="archive">
-        <figure><img src="img/o-embossed.webp" alt="Quilted top-handle bag with an embossed monogram" loading="lazy"></figure>
-        <figure><img src="img/o-cherry.webp" alt="Cherry-print calfskin pouch with a gold monogram" loading="lazy"></figure>
-        <figure><img src="img/o-components.webp" alt="Stacks of grained black wallets with four white corner stitches" loading="lazy"></figure>
-        <figure><img src="img/o-denim.webp" alt="Denim zip-around wallet" loading="lazy"></figure>
-        <figure><img src="img/o-rows.webp" alt="Rows of finished black top-handle bags" loading="lazy"></figure>
-        <figure><img src="img/o-pinkcrate.webp" alt="A crate of printed pink card holders" loading="lazy"></figure>
-        <figure><img src="img/o-colourrow.webp" alt="The same shoulder bag in eight colours" loading="lazy"></figure>
-        <figure><img src="img/o-pinkcognac.webp" alt="Rows of small totes in pink and cognac" loading="lazy"></figure>
-        <figure><img src="img/o-crocshoe.webp" alt="Glazed crocodile hides with a suede wingtip shoe" loading="lazy"></figure>
+        <figure><img src="img/o-embossed.webp" srcset="img/o-embossed-s.webp 800w, img/o-embossed.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Quilted top-handle bag with an embossed monogram" loading="lazy"></figure>
+        <figure><img src="img/o-cherry.webp" srcset="img/o-cherry-s.webp 800w, img/o-cherry.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Cherry-print calfskin pouch with a gold monogram" loading="lazy"></figure>
+        <figure><img src="img/o-components.webp" srcset="img/o-components-s.webp 800w, img/o-components.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Stacks of grained black wallets with four white corner stitches" loading="lazy"></figure>
+        <figure><img src="img/o-denim.webp" srcset="img/o-denim-s.webp 800w, img/o-denim.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Denim zip-around wallet" loading="lazy"></figure>
+        <figure><img src="img/o-rows.webp" srcset="img/o-rows-s.webp 800w, img/o-rows.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Rows of finished black top-handle bags" loading="lazy"></figure>
+        <figure><img src="img/o-pinkcrate.webp" srcset="img/o-pinkcrate-s.webp 800w, img/o-pinkcrate.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="A crate of printed pink card holders" loading="lazy"></figure>
+        <figure><img src="img/o-colourrow.webp" srcset="img/o-colourrow-s.webp 800w, img/o-colourrow.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="The same shoulder bag in eight colours" loading="lazy"></figure>
+        <figure><img src="img/o-pinkcognac.webp" srcset="img/o-pinkcognac-s.webp 800w, img/o-pinkcognac.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Rows of small totes in pink and cognac" loading="lazy"></figure>
+        <figure><img src="img/o-crocshoe.webp" srcset="img/o-crocshoe-s.webp 800w, img/o-crocshoe.webp 1800w" sizes="(max-width: 860px) 100vw, 50vw" alt="Glazed crocodile hides with a suede wingtip shoe" loading="lazy"></figure>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="fq-title">
+      <div class="sec-head sec-head--center">
+        <p class="label">Domande frequenti</p>
+        <h2 class="h1" id="fq-title">Questions</h2>
+      </div>
+      <div class="faq__list">
+        <details><summary>Can I order a single bespoke piece?</summary><p>Yes. We make one-off pieces to order, from a first sketch or a reference you bring us.</p></details>
+        <details><summary>Do you produce under my own label?</summary><p>Yes. We make private label pieces and collections with your name, your labels and your packaging.</p></details>
+        <details><summary>Do you work with new brands?</summary><p>Yes. We work with emerging designers as well as established houses, and we can guide you from the first idea to the finished run.</p></details>
+        <details><summary>My brand is based outside Italy. Can we still work together?</summary><p>Yes. Briefs, samples and approvals can all be handled at a distance. Tell us where you are and we will plan the rest with you.</p></details>
+        <details><summary>Can I order a sample only, without production?</summary><p>Yes. A prototype is the first step of every project, and you can stop there.</p></details>
+        <details><summary>Which leathers and hardware can I choose?</summary><p>Calf, grained calf, suede, crocodile, lizard and python, among others, with hardware from chains and turn-locks to pearls and jewelled clasps. We help you choose.</p></details>
+        <details><summary>How many pieces, and how long does it take?</summary><p>It depends on the piece and the quantity. Tell us about your project and we will give you a clear answer.</p></details>
+        <details><summary>How do I start?</summary><p>Write to us with the form below: what you would like to make, how many, and when you need it. We reply to every enquiry personally.</p></details>
       </div>
     </section>
 
@@ -211,8 +268,17 @@
   </main>
 
   <footer class="foot">
-    <p class="foot__mark" data-name>Atelier Firenze</p>
-    <p class="label">Pelletteria su misura · Firenze, Italia</p>
+    <div class="foot__top">
+      <p class="foot__mark" data-name>Atelier Firenze</p>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="#su-misura">Su misura</a><a href="#creazioni">Creazioni</a><a href="#atelier">Atelier</a><a href="#maisons">Maisons</a><a href="#faq">Questions</a><a href="#contatti">Contact</a>
+      </nav>
+    </div>
+    <div class="foot__bottom">
+      <p>Pelletteria su misura · Firenze, Italia</p>
+      <p><a href="https://www.instagram.com/" rel="noopener">Instagram</a> · <a href="#privacy">Privacy</a> · © 2026</p>
+    </div>
+    <p class="foot__credit" id="privacy">Address to follow. Enquiries sent through this site are used only to reply to you. Material and Florence photographs: Unsplash.</p>
   </footer>
 
   <script type="module" src="/src/main.ts"></script>

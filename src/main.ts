@@ -41,7 +41,7 @@ const hero = document.querySelector('.hero')!;
 new IntersectionObserver(([e]) => nav.classList.toggle('is-solid', !e.isIntersecting), { rootMargin: '-80px 0px 0px 0px' }).observe(hero);
 
 // Photos and headings fade in once, the first time they come into view.
-const fades = document.querySelectorAll('main section:not(.hero) figure, main section:not(.hero) .tiles li, .sec-head, .step__text, .intro > *, .colours__head, .logos, .contatti__head');
+const fades = document.querySelectorAll('main section:not(.hero) figure, .sec-head, .step__text, .intro > *, .colours__head, .logos, .contatti__head, .make__list, .faq__list');
 const io = new IntersectionObserver((entries) => {
   for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
 }, { rootMargin: '0px 0px -8% 0px' });
