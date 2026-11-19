@@ -11,12 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2",
     "typescript": "^7.0.2",
     "vite": "^8.3.8"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.3.0",
-    "@fontsource/hanken-grotesk": "^5.3.0"
+    "@fontsource/hanken-grotesk": "^5.3.0",
+    "nodemailer": "^10.6.0"
   },
   "private": "true",
   "type": "module"
