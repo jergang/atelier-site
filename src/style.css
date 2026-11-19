@@ -200,3 +200,6 @@ figcaption { margin-top: .9rem; font: 700 .9375rem/1.4 var(--sans); letter-spaci
 
 .contatti__mail { margin-top: 1.25rem; font: 700 1rem/1.4 var(--sans); letter-spacing: .04em; }
 .contatti__mail a, .foot a[href^="mailto"] { color: inherit; text-decoration: underline; text-underline-offset: .25em; text-decoration-thickness: 1px; }
+
+.form__send { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .8rem; }
+.form__send .btn { padding: .7rem 1.1rem; }

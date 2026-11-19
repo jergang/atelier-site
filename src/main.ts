@@ -67,6 +67,30 @@ form.addEventListener('submit', (e) => {
     '',
     v('brief'),
   ].join('\n');
-  window.location.href = `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  status.textContent = `Your email app should now be open with the enquiry ready. If not, write to ${MAIL}.`;
+  const q = (o: Record<string, string>) => Object.entries(o).map(([k, x]) => `${k}=${encodeURIComponent(x)}`).join('&');
+  const links: [string, string][] = [
+    ['Gmail', `https://mail.google.com/mail/?view=cm&fs=1&${q({ to: MAIL, su: subject, body })}`],
+    ['Outlook', `https://outlook.office.com/mail/deeplink/compose?${q({ to: MAIL, subject, body })}`],
+    ['Email app', `mailto:${MAIL}?${q({ subject, body })}`],
+  ];
+  status.innerHTML = '';
+  const p = document.createElement('p');
+  p.textContent = `Your enquiry is ready. Send it to ${MAIL} with:`;
+  const row = document.createElement('div');
+  row.className = 'form__send';
+  for (const [label, href] of links) {
+    const a = document.createElement('a');
+    a.className = 'btn btn--light';
+    a.href = href; a.textContent = label;
+    if (href.startsWith('http')) { a.target = '_blank'; a.rel = 'noopener'; }
+    row.append(a);
+  }
+  const copy = document.createElement('button');
+  copy.type = 'button'; copy.className = 'btn btn--light'; copy.textContent = 'Copy enquiry';
+  copy.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(`To: ${MAIL}\nSubject: ${subject}\n\n${body}`); copy.textContent = 'Copied'; }
+    catch { copy.textContent = 'Copy failed'; }
+  });
+  row.append(copy);
+  status.append(p, row);
 });
