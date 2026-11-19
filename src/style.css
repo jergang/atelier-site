@@ -197,3 +197,6 @@ figcaption { margin-top: .9rem; font: 700 .9375rem/1.4 var(--sans); letter-spaci
   .hero__pair img { height: 100%; animation: none; }
   .js .fade { opacity: 1; transform: none; transition: none; }
 }
+
+.contatti__mail { margin-top: 1.25rem; font: 700 1rem/1.4 var(--sans); letter-spacing: .04em; }
+.contatti__mail a, .foot a[href^="mailto"] { color: inherit; text-decoration: underline; text-underline-offset: .25em; text-decoration-thickness: 1px; }

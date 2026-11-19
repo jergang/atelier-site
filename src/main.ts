@@ -47,9 +47,26 @@ const io = new IntersectionObserver((entries) => {
 }, { rootMargin: '0px 0px -8% 0px' });
 fades.forEach((el) => { el.classList.add('fade'); io.observe(el); });
 
-// The form has no inbox yet; say so plainly.
+// No server: the form opens the visitor's email app with the enquiry written out.
+const MAIL = 'info@pellarno.it';
 const form = document.querySelector<HTMLFormElement>('.form')!;
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  form.querySelector('.form__status')!.textContent = 'This draft is not connected to an inbox yet, so nothing was sent.';
+  const status = form.querySelector('.form__status')!;
+  if (!form.reportValidity()) return;
+  const d = new FormData(form);
+  const v = (k: string) => String(d.get(k) ?? '').trim();
+  const subject = `Custom project: ${v('piece')}${v('company') ? ' for ' + v('company') : ''}`;
+  const body = [
+    `Name: ${v('name')}`,
+    `House or company: ${v('company') || '-'}`,
+    `Email: ${v('email')}`,
+    `Piece: ${v('piece')}`,
+    `Quantity: ${v('qty')}`,
+    `Timing: ${v('timing') || '-'}`,
+    '',
+    v('brief'),
+  ].join('\n');
+  window.location.href = `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  status.textContent = `Your email app should now be open with the enquiry ready. If not, write to ${MAIL}.`;
 });
