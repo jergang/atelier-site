@@ -1,6 +1,6 @@
-# Atelier Firenze
+# Pellarno
 
-Website for a Florentine leather workshop that designs and makes leather goods to order. "Atelier Firenze" is a working name: change it in `src/main.ts` (`NAME`).
+Website for a Florentine leather workshop that designs and makes leather goods to order. The public name is Pellarno, set in `src/main.ts` (`NAME`).
 
 Plain HTML, CSS and a small script, built with Vite. Deployed on Vercel.
 
@@ -21,6 +21,6 @@ npm run build
 ```
 
 ## Still to confirm
-The real name and address, permission for every house shown, and an inbox for the form.
+The address, permission for every house shown, and an inbox for the form.
 
 Fonts: Cormorant Garamond and Hanken Grotesk (SIL Open Font License).

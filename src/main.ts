@@ -6,7 +6,7 @@ import '@fontsource/hanken-grotesk/800.css';
 import './style.css';
 
 // Working name. Swap here for the workshop's real name.
-const NAME = 'Atelier Firenze';
+const NAME = 'Pellarno';
 
 // Houses the workshop has produced for, in the past. Official logos from Wikimedia Commons, in src/logos.
 const HOUSES = [

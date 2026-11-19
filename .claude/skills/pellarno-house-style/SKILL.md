@@ -1,9 +1,9 @@
 ---
-name: atelier-house-style
-description: The house style for the Atelier Firenze site (a Florentine leather workshop that designs and makes leather goods to order). Read before adding or changing any page, section, copy, image or motion in this repo.
+name: pellarno-house-style
+description: The house style for the Pellarno site (a Florentine leather workshop that designs and makes leather goods to order). Read before adding or changing any page, section, copy, image or motion in this repo.
 ---
 
-# Atelier house style
+# Pellarno house style
 
 Reference: chanel.com and givenchy.com. Photography carries the page; the type stays quiet; almost nothing moves.
 
