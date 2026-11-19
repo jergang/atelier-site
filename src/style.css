@@ -204,3 +204,9 @@ figcaption { margin-top: .9rem; font: 700 .9375rem/1.4 var(--sans); letter-spaci
 
 .form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form button:disabled { opacity: .6; cursor: progress; }
+
+.leathers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem clamp(1.5rem, 4vw, 4rem); margin-top: clamp(3rem, 6vw, 5rem); padding-top: 2.5rem; border-top: 1px solid currentColor; }
+.leathers__title { font: 600 clamp(1.5rem, 1.2rem + 1vw, 2rem)/1.1 var(--serif); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1.25rem; }
+.leathers ul { list-style: none; margin: 0; padding: 0; }
+.leathers li { font: 500 1.0625rem/1.4 var(--sans); padding: .55rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 25%, transparent); }
+@media (max-width: 760px) { .leathers { grid-template-columns: 1fr; } }
